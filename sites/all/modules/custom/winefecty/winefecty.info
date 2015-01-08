@@ -1,0 +1,5 @@
+name = Winsports / Efecty
+description = This module allow custom front-end and add new functionality
+core = 7.x
+package = Winsport Efecty
+dependencies[] = entityreference

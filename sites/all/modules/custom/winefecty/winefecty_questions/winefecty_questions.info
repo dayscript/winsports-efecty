@@ -1,0 +1,5 @@
+name = Winsports / Efecty - Questions
+description = Create form to show the questions of competition
+core = 7.x
+package = Winsport Efecty
+dependencies[] = winefecty

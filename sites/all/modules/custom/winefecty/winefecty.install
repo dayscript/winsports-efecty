@@ -1,0 +1,221 @@
+<?php
+
+    function winefecty_install() {
+
+        node_types_rebuild();
+        $types = node_type_get_types();
+        node_add_body_field($types['questions'], 'Description');
+
+        winefecty_fields_creates_questions();
+        winefecty_fields_creates_user_answers();
+        winefecty_fields_creates_user();
+
+    }
+
+    function winefecty_fields_creates_questions() {
+
+        $field = array(
+            'cardinality' => 1,
+            'field_name'  => 'field_correct_answer',
+            'module'      => 'text',
+            'type'        => 'text',
+            'settings'    => array( 'max_length' => 35 )
+        );
+
+        field_create_field( $field );
+
+        $instance = array(
+            'bundle'      => 'questions',
+            'description' => t(''),
+            'display'     => array(
+                'default' => array(
+                    'label'  => 'above',
+                    'weight' => 1
+                ),
+                'teaser' => array(
+                    'label'  => 'above',
+                    'weight' => 0,
+                )
+            ),
+            'entity_type' => 'node',
+            'label'       => t('Respuesta correcta'),
+            'field_name'  => 'field_correct_answer',
+            'widget'      => array(
+                'weight'   => 31,
+                'type'     => 'text_textfield',
+                'module'   => 'text',
+                'settings' => array( 'size' => 60 )
+            ),
+
+        );
+
+        field_create_instance( $instance );
+
+    }
+
+    function winefecty_fields_creates_user_answers() {
+
+        $fields = array(
+            0 => array(
+                'cardinality' => 1,
+                'field_name'  => 'field_selected_answer',
+                'module'      => 'text',
+                'type'        => 'text',
+                'settings'    => array( 'max_length' => 255 )
+            ),
+            1 => array(
+                'cardinality' => 1,
+                'field_name'  => 'field_points',
+                'module'      => 'text',
+                'type'        => 'text',
+                'settings'    => array( 'max_length' => 255 )
+            ),
+            2 => array(
+                'cardinality' => 1,
+                'field_name'  => 'field_question',
+                'module'      => 'entityreference',
+                'type'        => 'entityreference',
+                'settings'    => array(
+                    'target_type' => 'node',
+                    'handler'     => 'base',
+                    'handler_settings' => array(
+                        'questions' => 'questions'
+                    ),
+                ),
+            )
+        );
+
+        foreach ( $fields as $field ) {
+            field_create_field( $field );
+        }
+
+        $instances = array(
+            0 => array(
+                'bundle'      => 'user_answers',
+                'description' => t(''),
+                'display'     => array(
+                    'default' => array(
+                        'label'  => 'above',
+                        'weight' => 1
+                    ),
+                    'teaser' => array(
+                        'label'  => 'above',
+                        'weight' => 0,
+                    )
+                ),
+                'entity_type' => 'node',
+                'label'       => t('Respuesta escogida por el usuario'),
+                'field_name'  => 'field_selected_answer',
+                'widget'      => array(
+                    'weight'   => 31,
+                    'type'     => 'text_textfield',
+                    'module'   => 'text',
+                    'settings' => array( 'size' => 60 )
+                ),
+            ),
+            1 => array(
+                'bundle'      => 'user_answers',
+                'description' => t(''),
+                'display'     => array(
+                    'default' => array(
+                        'label'  => 'above',
+                        'weight' => 1
+                    ),
+                    'teaser' => array(
+                        'label'  => 'above',
+                        'weight' => 0,
+                    )
+                ),
+                'entity_type' => 'node',
+                'label'       => t('Puntos'),
+                'field_name'  => 'field_points',
+                'widget'      => array(
+                    'weight'   => 31,
+                    'type'     => 'text_textfield',
+                    'module'   => 'text',
+                    'settings' => array( 'size' => 60 )
+                ),
+            ),
+            2 => array(
+                'bundle'      => 'user_answers',
+                'description' => t(''),
+                'display'     => array(
+                    'default' => array(
+                        'label'  => 'above',
+                        'weight' => 1
+                    ),
+                    'teaser' => array(
+                        'label'  => 'above',
+                        'weight' => 0,
+                    )
+                ),
+                'entity_type' => 'node',
+                'label'       => t('Respuesta correcta'),
+                'field_name'  => 'field_correct_answer',
+                'widget'      => array(
+                    'weight'   => 31,
+                    'type'     => 'text_textfield',
+                    'module'   => 'text',
+                    'settings' => array( 'size' => 60 )
+                )
+            ),
+            3 => array(
+                'bundle'      => 'user_answers',
+                'description' => t(''),
+                'display'     => array(
+                    'default' => array(
+                        'label' => 'above',
+                        'type'  => 'entityreference_label'
+                    ),
+                    'teaser'  => array(
+                        'label' => 'label',
+                        'type'  => 'hidden'
+                    )
+                ),
+                'entity_type' => 'node',
+                'label'       => t('Pregunta'),
+                'field_name'  => 'field_question',
+                'widget'      => array(
+                    'type'     => 'entityreference_autocomplete',
+                    'module'   => 'entityreference',
+                    'settings' => array( 'size' => 60 )
+                )
+
+            )
+        );
+
+        foreach ( $instances as $instance ) {
+            field_create_instance( $instance );
+        }
+
+    }
+
+    function winefecty_fields_creates_user() {
+
+        $instance = array(
+            'bundle'      => 'user',
+            'description' => t(''),
+            'display'     => array(
+                'default' => array(
+                    'label'  => 'above',
+                    'weight' => 1
+                ),
+                'teaser' => array(
+                    'label'  => 'above',
+                    'weight' => 0,
+                )
+            ),
+            'entity_type' => 'user',
+            'label'       => t('Puntos'),
+            'field_name'  => 'field_points',
+            'widget'      => array(
+                'weight'   => 31,
+                'type'     => 'text_textfield',
+                'module'   => 'text',
+                'settings' => array( 'size' => 60 )
+            ),
+        );
+
+        field_create_instance( $instance );
+
+    }

@@ -1,0 +1,194 @@
+<?php
+
+
+    function winefecty_questions_block_info() {
+
+        $blocks = array();
+
+        $blocks['questions_form'] = array(
+            'cache' => DRUPAL_CACHE_GLOBAL,
+            'info'  => t('Formulario de preguntas')
+        );
+
+        return $blocks;
+
+    }
+
+    function winefecty_questions_block_view( $delta = '' ) {
+
+        $blocks = array();
+
+        if ( $delta == 'questions_form' ) {
+            $blocks['subject'] = t('Formulario de preguntas');
+            $blocks['content'] = theme( 'callback_questions', array(
+                    'questionsForm' => winefecty_questions_load_questions()
+                )
+            );
+        }
+
+        return $blocks;
+
+    }
+
+
+    function winefecty_questions_theme( $existing, $type, $theme, $path ) {
+        return array( 'callback_questions' => array( 'vars' => array('questionsForm' => NULL) ) );
+    }
+
+
+    function theme_callback_questions( &$vars ) {
+        return drupal_render( drupal_get_form( 'winefecty_questions_quest_form', $vars['questionsForm'] ) );
+    }
+
+
+    function winefecty_questions_load_questions() {
+
+        $questionsQuery  = new EntityFieldQuery();
+
+        $questionsQuery->entityCondition('entity_type', 'node')->entityCondition('bundle', 'questions');
+
+        $questionsResult = $questionsQuery->execute();
+        $options         = array_keys( $questionsResult['node'] );
+        $question1       = rand( $options[0], $options[count($options) - 1] );
+        $question2       = $question1;
+
+        while( ($question2 == $question1) ) {
+            $question2 = rand( $options[0], $options[count($options) - 1] );
+        }
+
+        return array(
+            0 => node_load( $questionsResult['node'][$question1]->nid ),
+            1 => node_load( $questionsResult['node'][$question2]->nid )
+        );
+
+    }
+
+
+    function winefecty_questions_quest_form( $form, &$form_states, $questionsForm ) {
+
+        if (!isset($_SESSION)) { session_start(); }
+
+
+
+        for ( $i=0; $i<count($questionsForm); $i++ ) {
+
+            $_SESSION['answers'] = winefecty_questions_options_load( $questionsForm[$i]->body['und'][0]['safe_value'] );
+
+            $form['question_' . ($i+1)] = array(
+                '#options' => winefecty_questions_options_load( $questionsForm[$i]->body['und'][0]['safe_value'] ),
+                '#prefix'   => '<div class="content-question-' . ($i + 1) . '">',
+                '#required' => TRUE,
+                '#suffix'   => '</div>',
+                '#title'    => $questionsForm[$i]->title,
+                '#type'     => 'radios',
+            );
+
+            $form['correct_answer_' . ($i + 1)] = array(
+                '#type'  => 'hidden',
+                '#value' => $questionsForm[$i]->field_correct_answer['und'][0]['value']
+            );
+
+        }
+
+        $form['send'] = array(
+            '#prefix' => '<div class="content-submit">',
+            '#suffix' => '</div>',
+            '#type'   => 'submit',
+            '#value'  => t('Enviar'),
+        );
+
+        return $form;
+
+    }
+
+    function winefecty_questions_quest_form_submit( $form, &$form_states ) {
+
+        $points      = 0;
+        $values      = $form_states['values'];
+        $userAnswers = array(
+            'question1' => array(
+                'selected_answer' => $values['question_1'],
+                'correct_answer'  => $values['correct_answer_1'],
+                'points'          => 0
+            ),
+            'question2' => array(
+                'selected_answer' => $values['question_2'],
+                'correct_answer'  => $values['correct_answer_2'],
+                'points'          => 0
+            )
+        );
+
+
+
+        foreach ( $userAnswers as $answer ) {
+
+            if ( $answer['selected_answer'] == $answer['correct_answer'] ) {
+                $answer['points'] = 10;
+                $points          += 10;
+            }
+
+            winefect_register_user_answers( $answer );
+
+        }
+
+        winefecty_register_total_points( $points );
+
+    }
+
+
+    function winefect_register_user_answers( $answer ) {
+
+        global $user;
+
+        $default = array(
+            'type'    => 'user_answers',
+            'uid'     => $user->uid,
+            'status'  => 1,
+            'comment' => 0,
+            'promote' => 0
+        );
+
+        $userAnswer        = entity_create( 'node', $default );
+        $userAnswerWrapper = entity_metadata_wrapper( 'node', $userAnswer );
+
+        $userAnswerWrapper->title                 = sprintf( 'Respuesta del usuario: %s', $user->name );
+        $userAnswerWrapper->field_selected_answer = $answer['selected_answer'];
+        $userAnswerWrapper->field_correct_answer  = $answer['correct_answer'];
+        $userAnswerWrapper->field_points          = $answer['points'];
+
+        $userAnswerWrapper->save();
+
+    }
+
+
+    function winefecty_register_total_points( $lastPoints ) {
+
+        global $user;
+
+        $userWrapper = entity_metadata_wrapper( 'user', $user );
+        $points      = $userWrapper->field_points->value();
+
+        $userWrapper->field_points = $points + $lastPoints;
+
+        $userWrapper->save();
+
+    }
+
+    function winefecty_questions_options_load( $options ) {
+
+        $options = explode( '<br />', strip_tags($options, '<br>') );
+
+        $keys = array( 'a', 'b', 'c', 'd' );
+
+        for ( $i=0; $i<count($options); $i++ ) {
+
+            $option                     = explode( '|', $options[$i] );
+
+            $optionsField[ $keys[$i] ] = $option[1];
+
+        }
+
+        return $optionsField;
+
+    }
+

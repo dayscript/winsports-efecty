@@ -1,0 +1,44 @@
+<?php
+
+    function winefecty_node_info() {
+
+        return array(
+            'questions' => array(
+                'base'        => 'winefecty',
+                'description' => t('Example.'),
+                'name'        => t('Preguntas concurso'),
+                'title_label' => t('Preguntas'),
+            ),
+            'user_answers' => array(
+                'base'        => 'winefecty',
+                'description' => t('.'),
+                'name'        => t('Respuestas del usuario'),
+                'title_label' => t('Usuario'),
+            )
+        );
+
+    }
+
+    function winefecty_form( $node, &$form_state ) {
+
+        $type = node_type_get_type( $node );
+        $form = array();
+
+        if ( $type->has_title ) {
+            $form['title'] = array(
+                '#default_value' => !empty($node->title) ? $node->title : '',
+                '#maxlength'     => 255,
+                '#required'      => TRUE,
+                '#title'         => check_plain($type->title_label),
+                '#type'          => 'textfield',
+                '#weight'        => -5
+            );
+        }
+
+        return $form;
+
+    }
+
+
+
+
