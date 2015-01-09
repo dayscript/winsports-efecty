@@ -83,9 +83,9 @@
                 '#type'     => 'radios',
             );
 
-            $form['correct_answer_' . ($i + 1)] = array(
+            $form['nid_' . ($i + 1)] = array(
                 '#type'  => 'hidden',
-                '#value' => $questionsForm[$i]->field_correct_answer['und'][0]['value']
+                '#value' => $questionsForm[$i]->nid
             );
 
         }
@@ -108,12 +108,12 @@
         $userAnswers = array(
             'question1' => array(
                 'selected_answer' => $values['question_1'],
-                'correct_answer'  => $values['correct_answer_1'],
+                'nid'             => $values['nid_1'],
                 'points'          => 0
             ),
             'question2' => array(
                 'selected_answer' => $values['question_2'],
-                'correct_answer'  => $values['correct_answer_2'],
+                'nid'             => $values['nid_2'],
                 'points'          => 0
             )
         );
@@ -122,12 +122,14 @@
 
         foreach ( $userAnswers as $answer ) {
 
-            if ( $answer['selected_answer'] == $answer['correct_answer'] ) {
+            $questionWrapper = entity_metadata_wrapper( 'node', node_load($answer['nid']) );
+
+            if ( $answer['selected_answer'] == $questionWrapper->field_correct_answer->value() ) {
                 $answer['points'] = 10;
                 $points          += 10;
             }
 
-            winefect_register_user_answers( $answer );
+            winefect_register_user_answers( $answer, $questionWrapper );
 
         }
 
@@ -136,7 +138,7 @@
     }
 
 
-    function winefect_register_user_answers( $answer ) {
+    function winefect_register_user_answers( $answer, $questionWrapper ) {
 
         global $user;
 
@@ -153,7 +155,8 @@
 
         $userAnswerWrapper->title                 = sprintf( 'Respuesta del usuario: %s', $user->name );
         $userAnswerWrapper->field_selected_answer = $answer['selected_answer'];
-        $userAnswerWrapper->field_correct_answer  = $answer['correct_answer'];
+        $userAnswerWrapper->field_correct_answer  = $questionWrapper->field_correct_answer->value();
+        $userAnswerWrapper->field_question        = intval( $questionWrapper->nid->value() );
         $userAnswerWrapper->field_points          = $answer['points'];
 
         $userAnswerWrapper->save();
