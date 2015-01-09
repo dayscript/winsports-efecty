@@ -1,0 +1,1471 @@
+/*
+ * @file
+ * global.styles
+ *
+ * Styles you add here will load for all device sizes, they are "global", as
+ * opposed to "responsive" styles, which only load for a given breakpoint (media
+ * query) that you set in theme settings. See the README for more details.
+ *
+ *
+ * How to use this file:
+ * --------------------
+ *
+ * There are many empty selectors and some basic styles to act as a guide.
+ * Nothing is set in stone and you can change anything - even delete all of it
+ * and start with your own clean slate.
+ *
+ * To FORCE PRINT all selectors you can search and replace a single { (opening
+ * curly brace) and insert an empty comment. This is very useful in conjuction
+ * with FireSass: https://addons.mozilla.org/en-US/firefox/addon/firesass-for-firebug/
+ *
+ * See global.base also which includes normalize.css and some additional
+ * helper classes and base styles.
+ */
+/* =============================================================================
+ *   Base
+ * ========================================================================== */
+/*
+ * To preserve theme settings never apply font properties to the HTML element.
+ * This is critically important if you are using the Responsive JavaScript
+ * feature as this relies on being able to set a pseudo font family on the HTML
+ * element. If you need to set default font properties of any kind use the BODY
+ * element as these can be overridden using font theme settings.
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\0000341}}
+html {
+  background: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\0000345}}
+body {
+  font-family: "Trebuchet MS", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 87.5%;
+  color: #ffffff;
+}
+
+/* =============================================================================
+ *   HTML Elements
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\0000359}}
+h2 {
+  color: #e95927;
+  text-transform: uppercase;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003144}}
+pre,
+code,
+tt,
+samp,
+kbd,
+var {
+  font-family: Consolas, Monaco, "Courier New", Courier, monospace, sans-serif;
+}
+
+/* =============================================================================
+ *   Wrappers
+ * ========================================================================== */
+/*
+ * Outer wrappers:
+ * - #page-wrapper: body > #page-wrapper
+ * - #page: body > #page-wrapper > #page
+ * - .container: body > #page-wrapper > #page.container
+ *
+ * The .container class holds the page width value from theme settings. You can
+ * style the .container class but do not add width such as border, padding,
+ * margins etc.
+ */
+/*
+ * Wraps all header elements - branding and .region-header
+ */
+/*
+ * Wraps the sidebars the content column
+ */
+/*
+ * Main content column wrapper
+ */
+/*
+ * Wraps the main-content-header, the content region and feed-icons. Use this
+ * wrapper to style the entire main content column
+ */
+/*
+ * Wraps the content region, avoid applying styles to this wrapper, its used
+ * mainly for position and invisible gutters and can be problematic to style
+ */
+/*
+ * Footer wrapper
+ */
+/*
+ * Panels may need additional margin wrangling when in the $content region
+ */
+/*
+ * Full Width Wrappers
+ * These are used in the optional page--full-width-wrappers.tpl.php template.
+ * All have internal .container classes. In the full width wrapper template the
+ * .container classes set the width or max-width - you can style this but never
+ * add any width/margin/padding/borders etc to .container
+ */
+/*
+ * Wraps the leaderboard
+ */
+/*
+ * Wraps the header
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003235}}
+#header-wrapper {
+  background: url("../images/backgrounds/header_bg.jpg") repeat-x;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003237}}
+#header-wrapper .container {
+  color: #ffffff;
+}
+
+/*
+ * Wraps the nav elements
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003246}}
+#nav-wrapper {
+  background: #fb6726;
+  height: 39px;
+}
+
+/*
+ * Wraps breadcrumb
+ */
+/*
+ * Wraps messages and help
+ */
+/*
+ * Wraps the secondary content/preface region
+ */
+/*
+ * Wraps the main content column
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003283}}
+#content-wrapper .container {
+  background: url("../images/backgrounds/content.jpg") top left no-repeat;
+}
+
+/*
+ * Wraps the tertiary content/postfix region
+ */
+/*
+ * Footer wrapper
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003300}}
+#footer-wrapper {
+  background: #082632;
+  border-top: 3px solid #fb6726;
+  min-height: 120px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003304}}
+#footer-wrapper .container {
+  color: #ffffff;
+  padding-top: 30px;
+}
+
+/* =============================================================================
+ *   Branding
+ * ========================================================================== */
+/*
+ * Wraps all the branding elements, logo, name and slogan
+ */
+/*
+ * Logo
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003324}}
+#logo {
+  padding: 10px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003327}}
+#logo img {
+  vertical-align: bottom;
+}
+
+/*
+ * Wrapper for the site name and slogan
+ */
+/*
+ * Site name (h1)
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003342}}
+#site-name {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003348}}
+#site-name a:link, #site-name a:visited {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003353}}
+#site-name a:hover, #site-name a:focus {
+  text-decoration: underline;
+}
+
+/*
+ * Site slogan (h2)
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003363}}
+#site-slogan {
+  margin: 0;
+}
+
+/* =============================================================================
+ *   Page content header
+ * ========================================================================== */
+/*
+ * Main content header wraps the page title, tabs and actions links
+ */
+/*
+ * The main page title (h1)
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003381}}
+#page-title {
+  margin: 0;
+  display: none;
+}
+
+/* =============================================================================
+ *   Misc Global Styles
+ * ========================================================================== */
+/*
+ * Feed icons
+ */
+/*
+ * Aggregator feed source
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003400}}
+#aggregator .feed-source .feed-icon {
+  display: inline;
+  float: none;
+  margin-right: 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003408}}
+.feed-details dt,
+.feed-details dd {
+  display: inline;
+  margin: 0;
+}
+
+/*
+ * Generic styles for the more link
+ */
+/*
+ * Generic styles for links. See the ul.links declaration in node and comment stylesheets
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003423}}
+ul.links {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003427}}
+ul.links.inline {
+  display: block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003431}}
+ul.links li {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+
+/*
+ * Search results are an ordered list so reset the margin
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003442}}
+.search-results {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Attribution message and link
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003451}}
+.attribution {
+  display: block;
+  opacity: 0.65;
+  padding: 1em 0;
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003457}}
+.attribution a {
+  text-decoration: none;
+  color: inherit;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003462}}
+.attribution a:hover, .attribution a:focus {
+  text-decoration: underline;
+}
+
+/* =============================================================================
+ *   Regions
+ * ========================================================================== */
+/*
+ * Standard region wrapper, don't add width to any regions, you will bork the layout - no margin, padding or borders etc
+ */
+/*
+ * Regions have an inner div - perfect for adding margin, padding or borders
+ */
+/*
+ * Regions can be nested, such as when using Panels
+ */
+/*
+ * Header region, embedded in the #header
+ */
+/*
+ * Generally used to output Drupals help block, if the help module is enabled
+ */
+/*
+ * Secondary content
+ */
+/*
+ * Sits above the main content header, like a content-top region
+ */
+/*
+ * Sits below the main content, like a content-bottom region
+ */
+/*
+ * Sidebars - targets both
+ */
+/*
+ * First sidebar
+ */
+/*
+ * Second sidebar
+ */
+/*
+ * Tertiary content
+ */
+/*
+ * Footer region
+ */
+/* =============================================================================
+ *   Links
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003555}}
+a {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003565}}
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+/* =============================================================================
+ *   Primary, Secondary and Menu Bar region menus
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003575}}
+.nav {
+  clear: both;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003580}}
+.nav ul,
+.nav ul.menu {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003586}}
+.nav li,
+.nav ul.menu li {
+  display: inline;
+  float: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003596}}
+.nav li a,
+.nav ul.menu li a {
+  display: block;
+  white-space: nowrap;
+  padding: 0 10px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003610}}
+.nav .block {
+  margin-bottom: 0;
+}
+
+/* =============================================================================
+ *   Superfish
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003620}}
+ul.sf-menu {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003623}}
+ul.sf-menu a {
+  border-left: 0;
+  border-top: 0;
+  padding: 0 10px;
+  text-decoration: none;
+  height: 2.5em;
+  line-height: 2.5em;
+  height: 51px;
+  padding-right: 23px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003637}}
+ul.sf-menu li {
+  top: -6px;
+  height: 51px;
+  padding-left: 17px !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003639}}
+ul.sf-menu li:hover, ul.sf-menu li.sfHover {
+  outline: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003645}}
+ul.sf-menu li.active-trail {
+  background: url("../images/backgrounds/menu-1.png") top left no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003654}}
+ul.sf-menu a:focus, ul.sf-menu a:hover, ul.sf-menu a:active {
+  outline: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003657}}
+ul.sf-menu a.active {
+  background: url("../images/backgrounds/menu-2.png") top right no-repeat;
+}
+
+/*
+ * Superfish blocks
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003671}}
+.block-superfish ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003682}}
+.block-superfish li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/*
+ * Vertical style
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003692}}
+.sf-vertical {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003695}}
+.sf-vertical li {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003701}}
+.sf-vertical li:hover ul, .sf-vertical li.sfHover ul {
+  left: 100%;
+  top: 0;
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003708}}
+.sf-vertical li a {
+  padding: 0 10px;
+}
+
+/*
+ * Navbar style
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003718}}
+.sf-navbar {
+  padding-bottom: 0 !important;
+}
+
+/*
+ * Sensible padding for the default style
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003726}}
+.sf-menu.sf-style-default a {
+  padding: 0 10px;
+}
+
+/* =============================================================================
+ *   Menu Toggles
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003738}}
+.at-mt .at-menu-toggle,
+.at-mt .at-menu-toggle ul,
+.at-mt .at-menu-toggle ul.menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003744}}
+.at-mt .at-menu-toggle-button {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003748}}
+.at-mt .at-menu-toggle ul a {
+  padding: 0 10px;
+  white-space: nowrap;
+}
+
+/* =============================================================================
+ *   Menus, usually blocks
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003759}}
+ul.menu {
+  padding-left: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003762}}
+ul.menu ul {
+  padding-left: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003770}}
+ul.menu li {
+  margin: 0;
+}
+
+/* If li.content exists it's a problem, so reset the padding */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003799}}
+.block .menu li.content {
+  padding: 0;
+}
+
+/* =============================================================================
+ *   Book navigation menu
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003816}}
+.book-navigation .page-up {
+  /* Prevent text wrapping to a new line, assumes English "up" is used (two characters) */
+  min-width: 2em;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003822}}
+.book-navigation .menu {
+  margin-left: 0;
+}
+
+/* =============================================================================
+ *   Breadcrumbs
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003832}}
+#breadcrumb {
+  margin: 10px 0;
+  /* If the label is set to show in theme settings the label class is added */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003836}}
+#breadcrumb .breadcrumb-label {
+  font-size: 1em;
+  display: inline;
+  padding-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003841}}
+#breadcrumb .breadcrumb-label:after {
+  content: ":";
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003846}}
+#breadcrumb ol {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003851}}
+#breadcrumb .with-breadcrumb-label ol {
+  display: inline;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003855}}
+#breadcrumb li {
+  list-style: none;
+  display: inline;
+}
+
+/* =============================================================================
+ *   Pagers
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003882}}
+ul.pager {
+  clear: both;
+  margin: 0;
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003889}}
+.item-list ul.pager li {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003894}}
+ul.pager li {
+  background-image: none;
+  display: inline;
+  list-style-type: none;
+  padding: .5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003900}}
+ul.pager li.pager-current {
+  font-weight: 700;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003906}}
+.block ul.pager li {
+  margin: 0;
+}
+
+/*
+ * Theme the various states of pager links
+ */
+/* =============================================================================
+ *   Skip Navigation
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003943}}
+#skip-link {
+  left: 50%;
+  margin-left: -6.5em;
+  margin-top: 0;
+  padding: 0 0.5em;
+  position: absolute;
+  width: 12em;
+  z-index: 50;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003952}}
+#skip-link a {
+  background: #444;
+  background: rgba(0, 0, 0, 0.6);
+  color: black;
+  display: block;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003963}}
+#skip-link a:link, #skip-link a:visited {
+  background: #444;
+  background: rgba(0, 0, 0, 0.6);
+  color: black;
+  display: block;
+  line-height: 2;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003975}}
+#skip-link a:hover, #skip-link a:focus, #skip-link a:active {
+  outline: 0;
+}
+
+/* =============================================================================
+ *   Tabs (local tasks)
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003986}}
+#tasks {
+  margin-bottom: 15px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003991}}
+ul.primary {
+  border-bottom-color: #cccccc;
+  margin: 20px 0;
+  padding: 0 0 0 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\00003996}}
+ul.primary li {
+  display: block;
+  float: left;
+  margin: 0 1px -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031001}}
+ul.primary li a {
+  background-color: whitesmoke;
+  border-color: #cccccc;
+  margin-right: 1px;
+  padding: 0 10px;
+  display: block;
+  float: left;
+  height: 1.5em;
+  line-height: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031012}}
+ul.primary li a:hover, ul.primary li a:focus {
+  background-color: #eeeeee;
+  border-color: #cccccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031022}}
+ul.primary li.active a,
+ul.primary li.active a:hover,
+ul.primary li.active a:focus {
+  background-color: black;
+  border-bottom-color: black;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031030}}
+ul.secondary {
+  border-bottom: 1px solid #cccccc;
+  margin: 1em 0 0;
+  padding: 0 .3em 1em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031035}}
+ul.secondary li {
+  border-right: 0;
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031042}}
+ul.secondary li a:hover, ul.secondary li a.active {
+  border-bottom: none;
+  text-decoration: underline;
+}
+
+/* =============================================================================
+ *   Action links
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031055}}
+ul.action-links {
+  margin: 20px 0 0;
+  list-style: none;
+}
+
+/* =============================================================================
+ *  Field Styling
+ * ========================================================================== */
+/*
+ * Wrapper for any field
+ */
+/*
+ * Above and inline classes are on the field wrapper
+ */
+/*
+ * When labels are set to inline in field display settings the clearfix class is automatically added
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031082}}
+.field-label-inline {
+  /* Remove the margin on inline field lables to preserve vertical formatting */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031085}}
+.field-label-inline .field-label {
+  margin: 0;
+}
+
+/*
+ * Labels are h2 in Adaptivetheme. Use a strong selector to mitigate unwanted ineritance issues
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031093}}
+.field-label {
+  font-size: 1em;
+  font-weight: 700;
+  font-family: inherit;
+  line-height: inherit;
+  margin-bottom: 0;
+}
+
+/*
+ * Field types (Core)
+ */
+/*
+ * Image fields use the <figure> and <figcaption> elements from HTML5
+ */
+/*
+ * Taxonomy
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031122}}
+.field-type-taxonomy-term-reference {
+  /* The same bottom margin as p, blockquote, ul, ol and dl */
+  margin-bottom: 1.5em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031127}}
+.field-type-taxonomy-term-reference.field-label-inline .field-items {
+  margin: 0;
+  padding: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031132}}
+.field-type-taxonomy-term-reference.field-label-inline .field-item {
+  display: inline;
+  list-style: none;
+  padding: 0 10px 0 0;
+}
+
+/*
+ * Text
+ */
+/*
+ * Long text
+ */
+/*
+ * Text with summary
+ */
+/*
+ * File
+ */
+/*
+ * Number/Integer
+ */
+/*
+ * Decimal
+ */
+/*
+ * Number float
+ */
+/*
+ * List
+ */
+/*
+ * List boolean
+ */
+/*
+ * List integer
+ */
+/*
+ * List float
+ */
+/*
+ * Field types (Contrib)
+ */
+/*
+ * Named fields
+ */
+/*
+ * Underscores in field name are replaced with dashes
+ */
+/*
+ * Image Alignment Theme Settings - included here so you can easily override
+ */
+/*
+ * Float none setting
+ */
+/*
+ * Float left setting
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031247}}
+.ia-l .field-type-image figure,
+.iat-l .field-type-image figure {
+  margin: 5px 20px 15px 0;
+}
+
+/*
+ * Centered setting
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031256}}
+.ia-c .field-type-image figure,
+.iat-c .field-type-image figure {
+  margin: 5px auto 15px;
+}
+
+/*
+ * Float right setting
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031265}}
+.ia-r .field-type-image figure,
+.iat-r .field-type-image figure {
+  margin: 5px 0 15px 20px;
+}
+
+/* =============================================================================
+ *   Block Styling
+ * ========================================================================== */
+/*
+ * Main wrapper for most blocks, block_system_main does not have it
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031278}}
+.block {
+  margin-bottom: 20px;
+}
+
+/*
+ * Inner wrapper for most blocks, good for margin, padding and borders, block_system_main does not have it
+ */
+/*
+ * The first block in the region
+ */
+/*
+ * The last block in the region
+ */
+/*
+ * Zebra striping for each block in the region
+ */
+/*
+ * Zebra striping for each block in the region
+ */
+/*
+ * Block title
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031316}}
+.block-title {
+  margin: 0;
+  font-family: 'Oswald';
+  text-transform: uppercase;
+  color: #e95927;
+}
+
+/*
+ * Block content wrapper
+ */
+/*
+ * Match item list and block menu margin and padding
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031336}}
+.block-content ul,
+.block-content ol {
+  padding: 0 0 0 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031340}}
+.block-content li {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Block for the latest news items in the first category
+ */
+/*
+ * Block for the latest news items in the first feed
+ */
+/*
+ * First block created with "Add block" link
+ */
+/*
+ * "Recent blog posts" block
+ */
+/*
+ * "Book navigation" block for the current book's table of contents
+ */
+/*
+ * "Recent comments" block
+ */
+/*
+ * "Active forum topics" block
+ */
+/*
+ * "New forum topics" block
+ */
+/*
+ * Language switcher block
+ */
+/*
+ * Custom menu block
+ */
+/*
+ * "Recent content" block
+ */
+/*
+ * "Syndicate" block for primary RSS feed; see also page.css's .feed-icon
+ */
+/*
+ * "Most recent poll" block
+ */
+/*
+ * "Author information" block for the profile of the page's author
+ */
+/*
+ * "Search form" block
+ */
+/*
+ * "Shortcuts" block
+ */
+/*
+ * "Popular content" block
+ */
+/*
+ * "Main menu" block
+ */
+/*
+ * "Management" block for Drupal management menu
+ */
+/*
+ * "Navigation" block for Drupal navigation menu
+ */
+/*
+ * "User menu" block for Drupal user menu
+ */
+/*
+ * "System help" block
+ */
+/*
+ * "Main page content" block
+ */
+/*
+ * "Powered by Drupal" block
+ */
+/*
+ * "User login form" block
+ */
+/*
+ * "Who's new" block for a list of the newest users
+ */
+/*
+ * "Who's online" block for a list of the online users
+ */
+/* =============================================================================
+ *   Node Styling
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031513}}
+.node {
+  margin-bottom: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031530}}
+.node .node-title {
+  margin: 0;
+}
+
+/*
+ * All nodes are given a node-FOO class that describes the type of content that
+ * it is. If you create a new content type called "my-custom-type", it will
+ * receive a "node-my-custom-type" class.
+ */
+/* =============================================================================
+ *   Comment Styling - Comments, comment wrapper, comment form
+ * ========================================================================== */
+/*
+ * Wrapper for the list of comments and its titles
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031588}}
+#comments {
+  margin: 1.5em 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031592}}
+#comments h2.comment-title {
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031596}}
+#comments h2.comment-form {
+  margin: 0;
+}
+
+/*
+ * Wrapper for a single comment
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031606}}
+.comment {
+  margin-bottom: 20px;
+}
+
+/*
+ * Comment title
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031637}}
+.comment-title {
+  margin: 0;
+}
+
+/*
+ * Comment states
+ */
+/*
+ * Preview of the comment before submitting new or updated comment
+ */
+/*
+ * "New" marker for comments that are new for the current user
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031669}}
+.new {
+  color: #cc0000;
+}
+
+/*
+ * Nested comments are indented
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031677}}
+.indented {
+  margin-left: 40px;
+}
+
+/* =============================================================================
+ *   Forms
+ * ========================================================================== */
+/*
+ * Wrapper for a form element (or group of form elements) and its label
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031693}}
+.form-item input.error,
+.form-item textarea.error,
+.form-item select.error {
+  border: 1px solid #cc0000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031697}}
+.form-item label {
+  font-weight: 700;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031704}}
+.form-item .description {
+  font-size: 0.85em;
+}
+
+/*
+ * Highlight marks and form required mark
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031718}}
+.marker,
+.form-required {
+  color: #cc0000;
+}
+
+/*
+ * The submit button
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031732}}
+.container-inline div,
+.container-inline label {
+  display: inline;
+}
+
+/*
+ * Define consistent borders
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031740}}
+fieldset {
+  border: 1px solid #cccccc;
+}
+
+/*
+ * Tips for Drupal's input formats
+ */
+/*
+ * Buttons used by contrib modules like Media
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031754}}
+a.button {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+}
+
+/*
+ * Password confirmation
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031763}}
+.password-parent,
+.confirm-parent {
+  margin: 0;
+}
+
+/* =============================================================================
+ *   Tables
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031772}}
+table {
+  margin: 10px 0;
+  padding: 0;
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031777}}
+table.sticky-header {
+  z-index: 10;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031788}}
+table,
+thead,
+tbody,
+tr,
+th,
+td {
+  border-color: #cccccc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031795}}
+table,
+td,
+th {
+  vertical-align: middle;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031802}}
+caption,
+th,
+td {
+  text-align: left;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031807}}
+thead tr {
+  font-weight: 700;
+  background-color: #e5e5e5;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031814}}
+td,
+th {
+  border-bottom: 0;
+  margin: 0;
+  padding: 5px 7px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031824}}
+tbody tr {
+  border-top: 1px solid #cccccc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031829}}
+tr {
+  /* Table row striping */
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031831}}
+tr.odd {
+  background: black;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031838}}
+tr.info, tr.even, tr:nth-child(2n+2) {
+  border-bottom: 0;
+  background-color: whitesmoke;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031847}}
+tr.odd td.active {
+  background-color: #eeeeee;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031851}}
+tr.even td.active {
+  background-color: #ebebeb;
+}
+
+/*
+ * Forum tables
+ * Core sets white-space to nowrap, which makes no sense
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031879}}
+#forum td.created, #forum td.posts, #forum td.topics, #forum td.last-reply, #forum td.replies, #forum td.pager {
+  white-space: normal;
+}
+
+/* =============================================================================
+ *   Messages
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031890}}
+div.messages {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031895}}
+div.messages ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*
+ * Unpublished nodes
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031936}}
+.node-unpublished p.unpublished,
+.comment-unpublished p.unpublished {
+  color: pink;
+  color: rgba(239, 170, 170, 0.4);
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal, "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", sans-serif;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 1.2;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-align: center;
+  text-transform: uppercase;
+  word-wrap: break-word;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/_custom\.scss}line{font-family:\00003194}}
+.ie6-7 .node-unpublished p.unpublished > *, .ie6-7
+.comment-unpublished p.unpublished > * {
+  position: relative;
+}
+
+/* =============================================================================
+ *    Maintenance pages
+ * ========================================================================== */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031947}}
+.maintenance-page .container {
+  padding: 40px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031952}}
+.maintenance-page #site-name,
+.maintenance-page #page-title {
+  margin: 0;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031959}}
+.db-offline .container {
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+  max-width: 960px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031966}}
+.db-offline div.messages {
+  margin: 20px 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031970}}
+.db-offline #content {
+  padding: 20px 0;
+}
+
+/* =============================================================================
+ *   Misc overrides for contrib modules
+ * ========================================================================== */
+/*
+ * Admin menu overrides
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031983}}
+#admin-menu {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Devel Module
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000031992}}
+.dev-query {
+  background: #eeeeee;
+  padding: 30px;
+}
+
+/*
+ * Styleguide module tweaks
+ */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032001}}
+#styleguide-header {
+  padding: 0 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032004}}
+#styleguide-header .item-list {
+  font-family: inherit;
+  margin: 0 20px 20px 0;
+  min-height: 260px;
+  width: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032013}}
+#block-block-1 {
+  float: right;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032016}}
+#block-block-2 {
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032018}}
+#block-block-2 a {
+  color: #ffffff;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032021}}
+#block-block-2 a:hover {
+  text-decoration: underline;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032028}}
+#block-winefecty-questions-questions-form .content-question-1,
+#block-winefecty-questions-questions-form .content-question-2 {
+  float: left;
+  width: 50%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032032}}
+#block-winefecty-questions-questions-form .content-question-1 .form-item-question-1,
+#block-winefecty-questions-questions-form .content-question-1 .form-item-question-2,
+#block-winefecty-questions-questions-form .content-question-2 .form-item-question-1,
+#block-winefecty-questions-questions-form .content-question-2 .form-item-question-2 {
+  margin: 10px auto;
+  width: 320px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032036}}
+#block-winefecty-questions-questions-form .content-question-1 .form-item-question-1 label[for="edit-question-1"],
+#block-winefecty-questions-questions-form .content-question-1 .form-item-question-1 label[for="edit-question-2"],
+#block-winefecty-questions-questions-form .content-question-1 .form-item-question-2 label[for="edit-question-1"],
+#block-winefecty-questions-questions-form .content-question-1 .form-item-question-2 label[for="edit-question-2"],
+#block-winefecty-questions-questions-form .content-question-2 .form-item-question-1 label[for="edit-question-1"],
+#block-winefecty-questions-questions-form .content-question-2 .form-item-question-1 label[for="edit-question-2"],
+#block-winefecty-questions-questions-form .content-question-2 .form-item-question-2 label[for="edit-question-1"],
+#block-winefecty-questions-questions-form .content-question-2 .form-item-question-2 label[for="edit-question-2"] {
+  font-family: "Oswald";
+  font-size: 1.2em;
+  line-height: 2em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032043}}
+#block-winefecty-questions-questions-form .content-submit {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032047}}
+input[type="submit"] {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #e95927;
+  border-radius: 4px;
+  border: none;
+  padding: 3px 10px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032057}}
+#node-3 .node-content {
+  min-height: 500px;
+  background: url("../images/backgrounds/premios.png") bottom right no-repeat;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032063}}
+.front.not-logged-in #content {
+  min-height: 600px;
+  background: url("../images/backgrounds/home.png") bottom right no-repeat;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032067}}
+.front.not-logged-in #block-user-login {
+  width: 300px;
+  padding: 100px 0 0 150px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032070}}
+.front.not-logged-in #block-user-login a {
+  color: #ffffff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032074}}
+.front.not-logged-in #block-user-login #edit-name,
+.front.not-logged-in #block-user-login #edit-pass {
+  border: none;
+  border-radius: 5px;
+  background: #ffffff;
+  padding: 3px;
+  width: 200px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032085}}
+.page-user h1#page-title {
+  display: block;
+  font-family: "Oswald";
+  color: #e95927;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032096}}
+.page-user #tasks ul li.active a {
+  background: #e95927;
+  color: #ffffff;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032107}}
+.field-name-field-points {
+  font-family: "Oswald";
+  text-transform: uppercase;
+  font-size: 1.4em;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032111}}
+.field-name-field-points h2.field-label {
+  color: #cb9449;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032119}}
+#block-views-ranking-de-usuarios-block table thead tr {
+  background: none;
+  color: #ffffff;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032123}}
+#block-views-ranking-de-usuarios-block table thead tr th {
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032125}}
+#block-views-ranking-de-usuarios-block table thead tr th a {
+  color: #ffffff;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032132}}
+#block-views-ranking-de-usuarios-block table tbody tr {
+  background: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032135}}
+#block-views-ranking-de-usuarios-block table tbody tr td.active {
+  background: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/Shared\/Dropbox\/DAYSCRIPT\/SOCCER\/WIN\%20Sports\/EFECTY\/winsports-efecty\/sites\/all\/themes\/at_efecty\/sass\/global\.styles\.scss}line{font-family:\000032139}}
+#block-views-ranking-de-usuarios-block table tbody tr a {
+  color: #ffffff;
+}
