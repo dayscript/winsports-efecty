@@ -53,7 +53,7 @@
         $question2       = $question1;
 
         while( ($question2 == $question1) ) {
-            $question2 = rand( $options[0], $options[count($options) - 1] );
+            $question2 = rand( 0, count($options) - 1 );
         }
 
         return array(
