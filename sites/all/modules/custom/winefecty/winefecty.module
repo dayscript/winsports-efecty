@@ -38,6 +38,20 @@
         return $form;
 
     }
+    
+    function winefecty_form_user_register_form_alter( &$form, &$form_state, $form_id ) {
+        $form['#validate'][] = 'winefecty_user_code_validate';
+    }
+    
+    function winefecty_user_code_validate( $form, &$form_state ) {
+                
+        $code = taxonomy_get_term_by_name( $form_state['values']['field_codigo_efecty'] );
+        
+        if( empty($code) ) {
+            form_set_error( 'field_codigo_efecty', t('El codigo suministrado no es valido') );
+        }
+        
+    }
 
 
 
