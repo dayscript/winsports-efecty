@@ -49,7 +49,7 @@
 
         $questionsResult = $questionsQuery->execute();
         $options         = array_keys( $questionsResult['node'] );
-        $question1       = rand( $options[0], $options[count($options) - 1] );
+        $question1       = rand( 0, count($options) - 1 );
         $question2       = $question1;
 
         while( ($question2 == $question1) ) {
@@ -57,8 +57,8 @@
         }
 
         return array(
-            0 => node_load( $questionsResult['node'][$question1]->nid ),
-            1 => node_load( $questionsResult['node'][$question2]->nid )
+            0 => node_load( $questionsResult['node'][ $options[$question1] ]->nid ),
+            1 => node_load( $questionsResult['node'][ $options[$question2] ]->nid )
         );
 
     }
