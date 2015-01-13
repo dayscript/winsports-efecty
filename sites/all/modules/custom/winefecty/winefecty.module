@@ -50,7 +50,7 @@
         $code = taxonomy_get_term_by_name( $form_state['values']['field_codigo_efecty'] );
         
         if( empty($code) ) {
-            form_set_error( 'field_codigo_efecty', t('El código suministrado no es válido') );
+        //    form_set_error( 'field_codigo_efecty', t('El código suministrado no es válido') );
         }
         
     }
