@@ -68,7 +68,7 @@
 
         if (!isset($_SESSION)) { session_start(); }
 
-
+        $_SESSION['questionsForm'] = $questionsForm;
 
         for ( $i=0; $i<count($questionsForm); $i++ ) {
 
