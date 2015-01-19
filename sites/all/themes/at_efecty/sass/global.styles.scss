@@ -2143,3 +2143,23 @@ input[type="submit"]{
     }
   }
 }
+
+.view-reporte {
+    table {
+        position: relative;
+        tfoot {
+            border: 1px solid #ffF;
+            background: none repeat scroll 0 0 #fff;
+            width: 100%;
+            td {
+                text-align: right;
+                color: #000;
+                div.label {
+                    display: inline;
+                    text-align: right;
+                }
+            }
+        }
+    }
+    
+}
