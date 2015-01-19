@@ -1,8 +1,10 @@
 (function($){
   
+  console.log('entro 1');
+  
   $('.view-reporte').find('tfoot').each(function(){
     
-    console.log('entro');
+    console.log('entro 2');
     
     $(this).find('td').each(function(i){
       if (i === 0) {
