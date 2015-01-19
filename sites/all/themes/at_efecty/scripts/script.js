@@ -2,6 +2,8 @@
   
   $('.view-reporte').find('tfoot').each(function(){
     
+    console.log('entro');
+    
     $(this).find('td').each(function(i){
       if (i === 0) {
         $(this).attr( 'colspan', '5' );
