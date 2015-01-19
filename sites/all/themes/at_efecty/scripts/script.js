@@ -1,8 +1,6 @@
 (function($){
   
-  console.log('entro 1');
-  
-  $('.view-reporte').find('tfoot').each(function(){
+  $('.view-reporte tfoot').each(function(){
     
     console.log('entro 2');
     
