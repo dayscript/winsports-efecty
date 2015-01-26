@@ -41,7 +41,7 @@
     
     $queryAnswer = db_select( 'node', 'n' )
 	    ->fields( 'n' )
-	    ->condition( 'n.type', 'user_answer', '=' )
+	    ->condition( 'n.type', 'user_answers', '=' )
 	    ->execute()
 	    ->rowCount();
     
