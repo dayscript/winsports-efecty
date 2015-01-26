@@ -1,24 +1,6 @@
 <?php
 
  
-  function winsports_video_export_menu() {
-    
-    $items = array();
-    
-    $items['winsports-video-export/%'] = array(
-	'access arguments' => array( 'access content' ),
-	'page arguments'   => array( 1 ),
-	'page callback'    => 'winsports_video_export_iframe_load',
-	'title'            => t('Exportar video'),
-	'type'             => MENU_CALLBACK,
-    );
-    
-    return $items;
-    
-  }
-  
-
-
   function winefecty_totals_block_info() {
     
     $blocks = array();
