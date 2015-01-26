@@ -1,0 +1,5 @@
+name = Winsports / Efecty - Totals
+description = Create Block where show total result for report
+core = 7.x
+ackage = Winsport Efecty
+dependencies[] = winefecty
